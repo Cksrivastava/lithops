@@ -43,6 +43,9 @@
             <a href="contact.html" class="search-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="contact.html" class="get-in-touch-btn">Request a Quote <i class="fa-solid fa-arrow-right-long"
                     style="margin-left: 5px;"></i></a>
+            <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -388,6 +391,36 @@
         </a>
     </div>
 
+    <!-- Mobile Menu Handler Script -->
+    <script>
+        const navToggle = document.getElementById('mobileNavToggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('mobile-active');
+                navToggle.classList.toggle('active');
+                const icon = navToggle.querySelector('i');
+                if (navLinks.classList.contains('mobile-active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !navToggle.contains(e.target) && navLinks.classList.contains('mobile-active')) {
+                    navLinks.classList.remove('mobile-active');
+                    navToggle.classList.remove('active');
+                    const icon = navToggle.querySelector('i');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

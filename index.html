@@ -43,6 +43,9 @@
             <div class="header-actions">
                 <a href="contact.html" class="search-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
                 <a href="contact.html" class="get-in-touch-btn">Request a Quote <i class="fa-solid fa-arrow-right-long" style="margin-left: 5px;"></i></a>
+                <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </header>
 
@@ -336,38 +339,141 @@
     <div class="bottom-sections-wrapper">
         <!-- Global Presence Section -->
         <section class="global-presence">
+            <!-- Ambient Lighting Glows -->
+            <div class="gp-glow-orb gp-glow-1"></div>
+            <div class="gp-glow-orb gp-glow-2"></div>
+
             <div class="gp-container">
+                <!-- Left Column: Content & CTA -->
                 <div class="gp-left">
-                    <span class="gp-subtitle">GLOBAL PRESENCE</span>
-                    <h2 class="gp-title">Delivering Healthcare<br>Across the Globe</h2>
-                    <p class="gp-desc">We are proud to export our quality products to multiple countries and are approved in several regulated markets worldwide.</p>
-                    <a href="#" class="gp-btn">Explore Global Presence <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="gp-badge">
+                        <span class="gp-pulse-dot"></span>
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <span>GLOBAL PRESENCE & EXPORTS</span>
+                    </div>
+
+                    <h2 class="gp-title">
+                        Delivering Healthcare <br>
+                        <span class="gp-title-highlight">Across the Globe</span>
+                    </h2>
+
+                    <p class="gp-desc">
+                        We are proud to manufacture and export high-efficacy, international-standard pharmaceutical formulations to over 50 countries, fully accredited by global health regulatory authorities.
+                    </p>
+
+                    <div class="gp-features-list">
+                        <div class="gp-feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>WHO-GMP & ISO Certified</span>
+                        </div>
+                        <div class="gp-feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>CTD/eCTD Dossiers Ready</span>
+                        </div>
+                        <div class="gp-feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Regulated & Semi-Regulated Markets</span>
+                        </div>
+                    </div>
+
+                    <div class="gp-actions">
+                        <a href="global-presence.html" class="gp-btn-primary">
+                            <span>Explore Global Footprint</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="gp-btn-secondary">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <span>Export Inquiry</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="gp-middle">
-                    <div class="gp-stat">
-                        <i class="fa-solid fa-globe"></i>
-                        <h3>50+</h3>
-                        <span>Countries</span>
-                    </div>
-                    <div class="gp-stat">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h3>200+</h3>
-                        <span>Products</span>
-                    </div>
-                    <div class="gp-stat">
-                        <i class="fa-solid fa-users"></i>
-                        <h3>100+</h3>
-                        <span>Partners</span>
-                    </div>
-                    <div class="gp-stat">
-                        <i class="fa-solid fa-star"></i>
-                        <h3>Trusted</h3>
-                        <span>Worldwide</span>
-                    </div>
-                </div>
+
+                <!-- Right Column: Interactive Stats Matrix with Map Background -->
                 <div class="gp-right">
-                    <!-- Pure CSS map placeholder -->
-                    <div class="map-placeholder"></div>
+                    <!-- World Map Silhouette Background with Animated Pulse Beacons -->
+                    <div class="gp-map-backdrop">
+                        <svg class="gp-world-svg" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M150,120 Q180,90 240,110 T300,160 T260,220 T180,240 T130,180 Z" fill="rgba(255,255,255,0.04)" />
+                            <path d="M220,260 Q270,270 290,340 T260,430 T200,440 T190,330 Z" fill="rgba(255,255,255,0.04)" />
+                            <path d="M480,90 Q560,70 600,120 T580,180 T500,190 T460,130 Z" fill="rgba(255,255,255,0.04)" />
+                            <path d="M470,210 Q540,200 580,260 T560,380 T490,390 T450,290 Z" fill="rgba(255,255,255,0.04)" />
+                            <path d="M620,100 Q780,80 840,150 T880,260 T760,280 T650,200 Z" fill="rgba(255,255,255,0.04)" />
+                            <path d="M760,330 Q840,320 860,380 T800,440 T730,410 Z" fill="rgba(255,255,255,0.04)" />
+                        </svg>
+
+                        <!-- Glowing Regional Beacons -->
+                        <div class="gp-beacon gp-beacon-1" title="Asia Pacific">
+                            <span class="gp-beacon-ring"></span>
+                            <span class="gp-beacon-core"></span>
+                        </div>
+                        <div class="gp-beacon gp-beacon-2" title="Middle East & Africa">
+                            <span class="gp-beacon-ring"></span>
+                            <span class="gp-beacon-core"></span>
+                        </div>
+                        <div class="gp-beacon gp-beacon-3" title="Latin America">
+                            <span class="gp-beacon-ring"></span>
+                            <span class="gp-beacon-core"></span>
+                        </div>
+                        <div class="gp-beacon gp-beacon-4" title="CIS & Europe">
+                            <span class="gp-beacon-ring"></span>
+                            <span class="gp-beacon-core"></span>
+                        </div>
+                    </div>
+
+                    <!-- 2x2 Glassmorphic Stat Cards Grid -->
+                    <div class="gp-stats-grid">
+                        <!-- Card 1 -->
+                        <div class="gp-stat-card">
+                            <div class="gp-card-header">
+                                <div class="gp-card-icon">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <span class="gp-card-tag">Global Reach</span>
+                            </div>
+                            <div class="gp-card-num">50<span class="gp-plus">+</span></div>
+                            <div class="gp-card-label">Export Countries</div>
+                            <div class="gp-card-sub">Active supply across 4 continents</div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="gp-stat-card">
+                            <div class="gp-card-header">
+                                <div class="gp-card-icon">
+                                    <i class="fa-solid fa-capsules"></i>
+                                </div>
+                                <span class="gp-card-tag">Formulations</span>
+                            </div>
+                            <div class="gp-card-num">200<span class="gp-plus">+</span></div>
+                            <div class="gp-card-label">Approved Products</div>
+                            <div class="gp-card-sub">High-potency therapeutic range</div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="gp-stat-card">
+                            <div class="gp-card-header">
+                                <div class="gp-card-icon">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <span class="gp-card-tag">Network</span>
+                            </div>
+                            <div class="gp-card-num">100<span class="gp-plus">+</span></div>
+                            <div class="gp-card-label">Global Partners</div>
+                            <div class="gp-card-sub">Trusted distributors & importers</div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="gp-stat-card">
+                            <div class="gp-card-header">
+                                <div class="gp-card-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <span class="gp-card-tag">Reliability</span>
+                            </div>
+                            <div class="gp-card-num">100<span class="gp-plus">%</span></div>
+                            <div class="gp-card-label">Regulatory Compliance</div>
+                            <div class="gp-card-sub">Audited & WHO-GMP compliant</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -486,5 +592,35 @@
         </a>
     </div>
 
+    <!-- Mobile Menu Handler Script -->
+    <script>
+        const navToggle = document.getElementById('mobileNavToggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('mobile-active');
+                navToggle.classList.toggle('active');
+                const icon = navToggle.querySelector('i');
+                if (navLinks.classList.contains('mobile-active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !navToggle.contains(e.target) && navLinks.classList.contains('mobile-active')) {
+                    navLinks.classList.remove('mobile-active');
+                    navToggle.classList.remove('active');
+                    const icon = navToggle.querySelector('i');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
